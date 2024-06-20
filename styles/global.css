@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #101010;
+}
+@layer utilities {
+  .flex-around {
+    @apply flex justify-around items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-center {
+    @apply flex items-center;
+  }
+  .title {
+    @apply text-20 p-15 text-[#FFA500];
+  }
+  body.showForm .main {
+    filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: filter 1500ms ease-in-out 0ms;
+  }
+  .flex2center {
+    @apply flex justify-center items-center;
+  }
+  .form-login {
+    transition: top 1000ms ease-in-out, opacity 1000ms ease-in-out;
+  }
+  .form-register {
+    transition: left 1000ms ease-in-out, opacity 1000ms ease-in-out;
+  }
+  .header {
+    @apply flex mx-auto w-content h-[60px];
+  }
+  .search-bar-input {
+    @apply flex-1 pl-10 py-5 rounded-l-5 outline-none text-black;
+  }
+  .search-bar-icon {
+    @apply bg-[#ccc] cursor-pointer py-5 px-15 rounded-r-5 text-black;
+  }
+  .background_styles {
+    @apply bg-cover bg-center bg-no-repeat h-[500px]
+      bg-[url('/icon/one-piece-header2000x1270-1687049323660685039990.jpg')] rounded-10 opacity-60;
+  }
+}
